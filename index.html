@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monit o ciasteczkach</title>
+</head>
+
+<body onload="checkCookie()">
+    <div id="ciastko">
+        Używamy cookies i podobnych technologii m.in. w celach: świadczenia usług, reklamy, statystyk. Korzystanie z witryny bez zmiany ustawień Twojej przeglądarki oznacza, że będą one umieszczane w Twoim urządzeniu końcowym. Pamiętaj, że zawsze możesz zmienić te ustawienia. Szczegóły znajdziesz w polityce prywatności.
+        <br />
+        <button onclick="makeCookie()">Akcpetuję</button>
+    </div>
+    <script>
+        function makeCookie() {
+            document.cookie = "cookieAccept: true;"
+                document.getElementById("ciastko").style.display = "none";
+        }
+
+        function checkCookie() {
+            if (document.cookie == "cookieAccept: true;") {
+                document.getElementById("ciastko").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
